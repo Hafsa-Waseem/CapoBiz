@@ -1,4 +1,5 @@
 import {
+  FlatList,
   Image,
   ImageBackground,
   Platform,
@@ -30,6 +31,7 @@ export default function CustomerAccount() {
   const [selectedOption, setSelectedOption] = useState<
     'withoutDetails' | 'withDetails'
   >('withoutDetails');
+  const [modal, setModal] = useState('');
 
   const handleDateChange = (event: any, selectedDate?: Date) => {
     if (event.type === 'dismissed') {
